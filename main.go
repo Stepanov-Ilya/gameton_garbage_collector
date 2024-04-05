@@ -1,7 +1,10 @@
 package main
 
-import controller "gameton/Controller"
+import (
+	"fmt"
+	controller "gameton/Controller"
+)
 
 func main() {
-	controller.PlayerUniversal()
+	fmt.Print(controller.PlayerRound())
 }
