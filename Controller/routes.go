@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
+	"gameton/Graph"
 	"gameton/Objects"
 	"io/ioutil"
 	"net/http"
@@ -33,6 +34,7 @@ func PlayerUniversal() Objects.UniverseResponse {
 	if err != nil {
 		fmt.Println(err)
 	}
+	Graph.FillGraph(PlayerUniversal().Universe)
 
 	return universal
 }
